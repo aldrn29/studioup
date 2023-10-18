@@ -19,9 +19,8 @@ export default Layout;
 
 const Main = styled.main`
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
 `;

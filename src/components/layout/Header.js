@@ -5,9 +5,8 @@ function Header() {
     return (
         <Warpper>
             <Inner>
-                <Logo>STUDIOUP</Logo>
+                <NavLink to="/"><h1>STUDIO_UP</h1></NavLink>
                 <Nav>
-                    <NavLink to="/">Home</NavLink>
                     <NavLink to="/about">About</NavLink>
                     <NavLink to="/works">Works</NavLink>
                     <NavLink to="/process">Process</NavLink>
@@ -22,10 +21,13 @@ export default Header;
 
 const Warpper = styled.div`
     width: 100%;
-    height: 100px;
+    height: 10vh;
+    position: absolute;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: end;
+    background-color: rgba(0,0,0,0);
 `;
 
 const Inner = styled.div`
@@ -34,14 +36,12 @@ const Inner = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & > 
 `;
 
-const Logo = styled.nav`
-    font-size: 2rem;
-`
-
 const Nav = styled.nav`
-    width: 370px;
+    width: 320px;
     display: flex;
     justify-content: space-between;
 `
