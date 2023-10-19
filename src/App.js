@@ -12,15 +12,15 @@ function App() {
     return (
         <>
             <GlobalStyles />
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Routes>
                 <Route element={<Layout/>}>
-                    <Route index element={<Home/>}/> 
-                    <Route path="about" element={<About/>}/>
-                    <Route path="works" element={<Works/>}/>
-                    <Route path="process" element={<Process/>}/>
-                    <Route path="contact" element={<Contact/>}/>
-                    <Route path="*" element={<Home/>}/>
+                    <Route path="/" element={<Home/>}/> 
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/works" element={<Works/>}/>
+                    <Route path="/process" element={<Process/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
+                    <Route path="/*" element={<Home/>}/>
                 </Route>
                 </Routes>
             </Router>
