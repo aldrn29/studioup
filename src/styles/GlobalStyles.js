@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import media from '../styles/media';
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -36,6 +37,11 @@ const GlobalStyles = createGlobalStyle`
     }
     h1 {
         font-size: 1.5rem;
+
+        ${ media.medium`
+            font-size: 1.2rem;
+        `}
+    }
     }
 `;
  

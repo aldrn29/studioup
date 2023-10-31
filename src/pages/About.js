@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import pic from '../assets/images/pic03.jpg';
+import pic from '../assets/images/pic06.jpg';
+import media from '../styles/media'; 
 
 function About() {
     return (
@@ -37,4 +38,8 @@ const Inner = styled.div`
     & > h1 {
         margin-bottom: 50px;
     }
+
+    ${ media.medium`
+        max-width: 80%;
+    `}
 `;

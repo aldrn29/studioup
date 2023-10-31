@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import YouTube from 'react-youtube';
 import WorkData from '../data/WorkData';
+import media from '../styles/media'; 
 
 function Works() {
     const WorkList = WorkData.map(data => (
@@ -36,8 +37,8 @@ export default Works;
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 150vh;
-    padding-top: 10vh;
+    height: auto;
+    padding: 20vh 0 10vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,9 +47,13 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
     width: 930px;
-    height: auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+
+    ${ media.large`
+        max-width: 80%;
+    `}
 `;
 
 const Video = styled.div`

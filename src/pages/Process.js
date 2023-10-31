@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ProcessData from '../data/ProcessData';
 import pic from '../assets/images/pic04.jpg';
+import media from '../styles/media'; 
 
 function Process() {
     const ProcessList = ProcessData.map(data => (
@@ -26,8 +27,8 @@ export default Process;
 
 const Wrapper = styled.div`
     width: 100%;
-    height: 100vh;
-    padding-top: 10vh;
+    height: auto;
+    padding: 20vh 0 10vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,23 +38,33 @@ const Wrapper = styled.div`
         width: 470px; 
         height: 200px; 
         object-fit: cover;
+
+        ${ media.medium`
+            max-width: 80%;
+        `}
     }
 `;
 
 const Inner = styled.div`
     width: 470px;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+
+    ${ media.medium`
+        max-width: 80%;
+        display: flex;
+    `}
 `;
 
 const Title = styled.div`
     width: auto;
-    margin: 50px 0 0 0;
+    margin: 20px 0 0 0;
 `;
 
 const Content = styled.div`
     width: auto;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
 `;
